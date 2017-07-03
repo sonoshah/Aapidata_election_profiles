@@ -22,6 +22,9 @@ county <- county %>% filter(State == params$state)
 currentstate <- congress$State[1]
 seats <- nrow(congress)
 counties<- nrow(county)
+district_plural <- ifelse(seats>1, "Congressional Districts", "Congressional District")
+county_plural <- ifelse(counties>1, "Counties", "County")
+
 ```
 
 
@@ -30,7 +33,7 @@ counties<- nrow(county)
 > List will be here
 
 ## Congressional Districts
-<span style="color:red">`r currentstate`</span> has **`r seats`** Congressional Districts where AAPIs are more than 3% of the district population
+<span style="color:red">`r currentstate`</span> has **`r seats`** `r district_plural` where AAPIs are more than 3% of the district population
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 #counties <- read_excel('byjurisdiction_edit.xlsx',sheet = 2)
@@ -42,7 +45,7 @@ datatable(congress,extensions = "Buttons",rownames= FALSE, options = list(dom = 
 ```
 
 ## Counties
-<span style="color:red">`r currentstate`</span> has **`r counties`** counties where AAPIs are more than 3% of the county population
+<span style="color:red">`r currentstate`</span> has **`r counties`** `r county_plural` where AAPIs are more than 3% of the county population
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 #counties <- read_excel('byjurisdiction_edit.xlsx',sheet = 2)
