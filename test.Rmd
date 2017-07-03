@@ -26,9 +26,8 @@ counties<- nrow(county)
 
 
 ## Elected Officials in <span style="color:red">`r currentstate`</span>
-
-Here is a list of the curent AAPI Elected Officials in the State of <span style="color:red">`r currentstate`</span>
-> List Here
+> Here is a list of the curent AAPI Elected Officials in the State of <span style="color:red">`r currentstate`</span>
+> List will be here
 
 ## Congressional Districts
 <span style="color:red">`r currentstate`</span> has **`r seats`** Congressional Districts where AAPIs are more than 3% of the district population
@@ -37,7 +36,7 @@ Here is a list of the curent AAPI Elected Officials in the State of <span style=
 #counties <- read_excel('byjurisdiction_edit.xlsx',sheet = 2)
 
 datatable(congress,extensions = "Buttons",rownames= FALSE, options = list(dom = 'Brtip',
-    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))) %>% formatPercentage('AAPI Proportion', 2) %>%
+    buttons = c('copy', 'csv', 'excel'))) %>% formatPercentage('AAPI Proportion', 2) %>%
   formatCurrency(c("Total Pop", "Asian Alone", "NHPI Alone", "AAPI"),currency = "", interval = 3, mark = ",", digits=0)
 #format(round(as.numeric(1000.64), 1), nsmall=1, big.mark=",")  
 ```
@@ -49,7 +48,7 @@ datatable(congress,extensions = "Buttons",rownames= FALSE, options = list(dom = 
 #counties <- read_excel('byjurisdiction_edit.xlsx',sheet = 2)
 
 datatable(county,extensions = "Buttons",rownames= FALSE, options = list(dom = 'Brtip',
-    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))) %>% formatPercentage('AAPI Proportion', 2) %>%
+    buttons = c('copy', 'csv', 'excel'))) %>% formatPercentage('AAPI Proportion', 2) %>%
   formatCurrency(c("Total Pop", "Asian Alone", "NHPI Alone", "AAPI"),currency = "", interval = 3, mark = ",", digits=0)
 #format(round(as.numeric(1000.64), 1), nsmall=1, big.mark=",")  
 ```
