@@ -27,6 +27,8 @@ navbar:
         - text: "Wisconsin"
           href: Wisconsin.html
         - text: "Michigan"
+          href: Michigan.html
+        - text: "New York"
           href: New_York.html
 output:
   html_document:
